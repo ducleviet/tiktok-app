@@ -1,0 +1,26 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    min-width: 1150px;
+    display: flex;
+    margin-top: 60px;
+    justify-content: space-between;
+}
+
+.sidebar-container {
+    flex-shrink: 0;
+    width: 356px;
+}
+
+.content {
+    padding: 24px 0;
+    width: 692px;
+    max-width: 692px;
+    margin-right: 16px;
+    margin-left: 16px;
+    position: relative;
+}

@@ -1,0 +1,39 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-container {
+    justify-content: space-between !important;
+
+    div {
+        max-width: 100%;
+    }
+}
+
+.container {
+    width: 100vw;
+    max-width: 100vw;
+    display: flex;
+    margin-top: 60px;
+    justify-content: flex-start;
+}
+
+.sidebar-container {
+    flex-shrink: 0;
+    width: 240px !important;
+}
+.sidebar-body {
+    width: 240px !important;
+}
+// profile user #
+.content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 32px 24px;
+    margin: 0 25px;
+    box-sizing: content-box;
+    min-height: calc(100vh - 59px);
+}

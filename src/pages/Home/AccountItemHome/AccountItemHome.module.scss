@@ -1,0 +1,146 @@
+.conatainer-line {
+    display: flex;
+    padding: 20px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    max-width: 692px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        transform: scaleY(0.5);
+        background: rgba(22, 24, 35, 0.2);
+    }
+}
+.container {
+    display: flex;
+}
+
+.avatar-container {
+    height: 56px;
+    display: flex;
+
+    &:hover ~ .user-name {
+        text-decoration: underline;
+    }
+}
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.container-conten {
+    margin-left: 12px;
+    width: 624px;
+}
+
+.text-container {
+    margin-right: 114px;
+}
+
+.info-user {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover > .user-name {
+        text-decoration: underline;
+    }
+}
+
+.user-name {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-right: 4px;
+    line-height: 25px;
+}
+.icon-check {
+    margin-left: 4px;
+}
+
+.nick-name {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 28px;
+}
+
+.btn-follow {
+    position: absolute;
+    top: 28px;
+    right: 0;
+}
+
+.description {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.title-music {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+
+.music-icon {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    margin-right: 5px;
+}
+
+.video-container {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+}
+.video-wapper {
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 20px;
+    background-size: cover;
+    height: calc(450px + (100vw - 768px) / 1152 * 100);
+    position: relative;
+}
+.icon-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    cursor: pointer;
+}
+
+.btn-backroug {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    transition: all ease-in-out 200ms;
+    background-color: rgba(22, 24, 35, 0.06);
+    margin-top: 8px;
+    margin-bottom: 6px;
+}
+
+.count-status {
+    color: rgba(22, 24, 35, 0.75);
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+}

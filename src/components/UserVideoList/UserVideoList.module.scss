@@ -1,0 +1,148 @@
+.wraper {
+    position: relative;
+    flex: 0 0 auto;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    max-width: 624px;
+    padding-right: 92px;
+}
+.info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.avatar-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.avatar-container {
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.titlle-user {
+    flex: 1;
+    cursor: pointer;
+    overflow: visible;
+    margin-left: 20px;
+}
+
+.name-user {
+    font-family: var(--font-family-sofia);
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 38px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    word-break: break-word;
+}
+
+.icon-check {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+}
+
+.nickname {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 25px;
+    text-overflow: ellipsis;
+    height: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 450px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.conatainer-btn {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    position: relative;
+    width: 208px;
+    height: 36px;
+    padding: 0;
+    margin: 0;
+    margin-top: 16px;
+}
+
+.btn-follow {
+    font-size: 1.8rem;
+    min-width: 208px;
+}
+
+// count follow
+.count-container {
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    color: rgba(18, 18, 18, 0.75);
+}
+
+.conten-count {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: rgba(22, 24, 35, 1);
+    font-family: var(--font-family-sofia);
+    margin-right: 20px;
+}
+
+.title-count {
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: rgba(22, 24, 35, 0.75);
+    margin-left: 6px;
+}
+.bio {
+    text-align: left;
+    color: rgba(22, 24, 35, 1);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 22px;
+    white-space: pre-line;
+    margin-top: 10px;
+}
+
+.link {
+    max-width: 256px;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    line-height: 22px;
+    color: rgba(22, 24, 35, 1);
+    font-family: var(--font-family-sofia);
+
+    :hover + .title-link {
+        text-decoration: underline;
+    }
+}
+
+.title-link {
+    font-weight: 600;
+    font-size: 1.6rem;
+    padding-left: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-style: normal;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
