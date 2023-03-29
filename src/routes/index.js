@@ -6,6 +6,7 @@ import Live from '@/pages/Live';
 
 import HeaderOnly from '@/layouts/HeaderOnly';
 import DefaultLayout from '@/layouts/DefaultLayout';
+import ModerVideo from '@/layouts/ModerVideo';
 import config from '@/config';
 
 const publicRoures = [
@@ -14,5 +15,6 @@ const publicRoures = [
     { path: config.routes.upload, element: Upload, index: 3, layout: HeaderOnly },
     { path: config.routes.profile, element: Profile, index: 4, layout: HeaderOnly },
     { path: config.routes.live, element: Live, index: 5, layout: DefaultLayout },
+    { path: config.routes.moder, element: ModerVideo, index: 6, layout: ModerVideo },
 ];
 export { publicRoures };

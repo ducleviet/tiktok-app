@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import styles from './Profile.module.scss';
@@ -25,7 +25,6 @@ function Profile() {
 
     return (
         <div className={cx('wrapper')}>
-            {/* {console.log('app', url)} */}
             <UserVideoList data={userProfile} />
             <div className={cx('container')}>
                 <div className={cx('heander-container')}>

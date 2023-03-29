@@ -3,15 +3,17 @@ import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 're
 import classNames from 'classnames/bind';
 import styles from './Videos.module.scss';
 
-import { PlayIcon, SoundIcon } from '@/components/Icons';
+import { PauseIcon, PlayIcon, SoundIcon } from '@/components/Icons';
 
 const cx = classNames.bind(styles);
 
 const Videos = forwardRef(({ data, className, ...props }, ref) => {
+    let play = true;
     const videoRef = useRef();
     const [playVideo, setPlayVideo] = useState(true);
+    const [clickPlay, setClickPlay] = useState(play);
     const { ref: refApi, inView } = useInView({
-        threshold: 0.777,
+        threshold: 0.7777,
     });
 
     useImperativeHandle(ref, () => ({
@@ -29,9 +31,17 @@ const Videos = forwardRef(({ data, className, ...props }, ref) => {
             videoRef.current.pause();
         } else if (playVideo === false) {
             videoRef.current.play();
-            videoRef.current.muted = false;
+            // videoRef.current.muted = false;
         }
     }, [inView]);
+
+    const handllePlay = () => {
+        videoRef.current.play();
+    };
+
+    const handlePause = () => {
+        videoRef.current.pause();
+    };
 
     return (
         <div ref={refApi} className={cx('wrapper')}>
@@ -39,17 +49,23 @@ const Videos = forwardRef(({ data, className, ...props }, ref) => {
                 src={data.file_url}
                 className={cx('video', className)}
                 ref={videoRef}
-                controls
                 loop={true}
                 muted={true}
                 autoPlay={true}
                 {...props}
             />
             <div className={cx('play-icon')}>
-                <PlayIcon />
+                {playVideo ? <PauseIcon onClick={handlePause} /> : <PlayIcon onClick={handllePlay} />}
             </div>
-            <div className={cx('sound-icon')}>
-                <SoundIcon />
+            <div className={cx('voice-container')}>
+                <div className={cx('volume-control')}>
+                    <div className={cx('Progress')}></div>
+                    <div className={cx('circle')}></div>
+                    <div className={cx('bal')}></div>
+                </div>
+                <div className={cx('sound-icon')}>
+                    <SoundIcon />
+                </div>
             </div>
         </div>
     );

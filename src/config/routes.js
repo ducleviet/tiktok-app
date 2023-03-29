@@ -5,6 +5,7 @@ const routes = {
     profile: '/:nickname',
     search: '/search',
     live: '/live',
+    moder: '/videos',
 };
 
 export default routes;
